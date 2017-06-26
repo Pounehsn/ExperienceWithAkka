@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExperienceWithAkka.Client", "ExperienceWithAkka.Client\ExperienceWithAkka.Client.csproj", "{9CD4CDC2-5013-4437-831E-F32D3E5757E9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExperienceWithAkka.Service", "ExperienceWithAkka.Service\ExperienceWithAkka.Service.csproj", "{BE022649-3ED1-4F8B-8E7D-9980BF57922B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExperienceWithAkka.Shared", "ExperienceWithAkka.Shared\ExperienceWithAkka.Shared.csproj", "{11B3003D-FDE8-4190-8798-B5A577CC195B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9CD4CDC2-5013-4437-831E-F32D3E5757E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CD4CDC2-5013-4437-831E-F32D3E5757E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CD4CDC2-5013-4437-831E-F32D3E5757E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CD4CDC2-5013-4437-831E-F32D3E5757E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE022649-3ED1-4F8B-8E7D-9980BF57922B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE022649-3ED1-4F8B-8E7D-9980BF57922B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE022649-3ED1-4F8B-8E7D-9980BF57922B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE022649-3ED1-4F8B-8E7D-9980BF57922B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11B3003D-FDE8-4190-8798-B5A577CC195B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11B3003D-FDE8-4190-8798-B5A577CC195B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11B3003D-FDE8-4190-8798-B5A577CC195B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11B3003D-FDE8-4190-8798-B5A577CC195B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
