@@ -1,11 +1,24 @@
-﻿namespace ExperienceWithAkka.Shared
+﻿using System;
+using System.Threading;
+using Akka.Actor;
+
+namespace ExperienceWithAkka.Shared
 {
-    public class Greet
+    public class GreetingActor : ReceiveActor
     {
-        public Greet(string who)
+        public GreetingActor()
         {
-            Who = who;
+            Console.WriteLine("GreetingActor");
+            Receive<Greet>(
+                greet =>
+                {
+                    for (var i = 0; i < 10; i++)
+                    {
+                        Console.WriteLine("Hello {0}", greet.Who);
+                        Thread.Sleep(1000);
+                    }
+                }
+            );
         }
-        public string Who { get; private set; }
     }
 }

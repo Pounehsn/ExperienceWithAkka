@@ -1,6 +1,5 @@
 ﻿using System;
 using Akka.Actor;
-using Akka.Configuration;
 using ExperienceWithAkka.Shared;
 
 namespace ExperienceWithAkka.Client
@@ -9,30 +8,20 @@ namespace ExperienceWithAkka.Client
     {
         private static void Main()
         {
-
-            var config = ConfigurationFactory.ParseString(@"
-                akka {
-                    actor {
-                        provider = ""Akka.Remote.RemoteActorRefProvider, Akka.Remote""
-                    }
-                    remote {
-                        helios.tcp {
-                            port = 8090
-                            hostname = localhost
-                        }
-                    }
-                }
-            ");
-
-            using (var system = ActorSystem.Create("MyClient", config))
+            Console.WriteLine("Client");
+            using (var system = ActorSystem.Create("GreetingSystem"))
             {
-                //get a reference to the remote actor
-                var greeter = system
-                    .ActorSelection("akka.tcp://MyServer@localhost:8080/user/greeter");
+                var actor = system.ActorOf(Props.Create<GreetingActor>(), "Greeting");
+                Console.WriteLine(actor);
+
                 //send a message to the remote actor
                 while (true)
                 {
-                    greeter.Tell(new Greet(Console.ReadLine()));
+                    //get a reference to the remote actor
+                    var greeter = system.ActorSelection("/user/Greeting");
+                    Console.WriteLine("Who?");
+                    var message = new Greet(Console.ReadLine());
+                    greeter.Tell(message);
                 }
             }
         }
